@@ -10,7 +10,7 @@ class IdpProvider {
    * @return
    *   The Assertion Consumer Service Url.
    */
-  public function getServiceProviderAcs($entityId){
+  public function getServiceProviderAcs(){
     return 'https://accounts.zohoportal.com/accounts/csamlresponse/10072513335';
   }
 
