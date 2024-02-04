@@ -50,14 +50,14 @@ $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
             <div class="bg-light rounded p-4 my-5">
                 <div>
                     <h5>SAMLRequest </h5>
-                    <p>
+                    <p style="word-break: break-all;">
                     <?php print $request->get("SAMLRequest") ?>
                     </p>
                 </div>
                 <div class="my-3"></div>
                 <div>
                     <h5>RelayState </h5>
-                    <p>
+                    <p style="word-break: break-all;">
                     <?php print $request->get("RelayState") ?>
                     </p>
                 </div>
