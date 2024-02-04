@@ -7,7 +7,7 @@ $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
 
 ?>
 
-<h1>IdP Login Page</h1>
+<h1>IdP Login Page with lite saml</h1>
 
 <form action="post-saml.php">
     <div>

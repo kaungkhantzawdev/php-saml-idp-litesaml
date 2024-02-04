@@ -3,8 +3,8 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 include "inc.php";
-include "src/Utility/IdpProvider.php";
-include "src/Utility/IdpTools.php";
+include "service/IdpProvider.php";
+include "service/IdpTools.php";
 
 // Initiating our IdP Provider dummy connection.
 $idpProvider = new IdpProvider();
