@@ -65,7 +65,7 @@ $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
 
         </div>
 
-            <div class="bg-light rounded p-4 my-5 d-none">
+            <div class="bg-light rounded p-4 my-5">
                 <div>
                     <h5>SAMLRequest </h5>
                     <p style="word-break: break-all;">
