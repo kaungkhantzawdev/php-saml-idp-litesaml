@@ -35,7 +35,7 @@ $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
                 </p>
 
                 <form action="post-saml.php">
-                    <button class="btn btn-primary btn-lg" type="submit">Go to zoho desk</button>
+                    <button class="btn btn-primary btn-lg" type="submit">Go to odoo</button>
 
                     <input type="hidden" name="user_email"
                         value="<?php print $request->get("user_email") ?>">
