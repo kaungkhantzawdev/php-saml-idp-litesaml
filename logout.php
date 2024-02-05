@@ -13,10 +13,10 @@
         <img class="d-block mb-4 rounded" src="https://www.judgify.me/l/wp-content/uploads/2020/09/Judgify-logo.png" alt="" width="200px" height="auto">
         <p class="lead mb-5">
             <div class="alert alert-success border-0" role="alert">
-            You're successfully logout. 
+            You're successfully Log out. 
             </div>
         </p>
-        <a href="https://riomac.zohodesk.com/portal" class="btn btn-lg btn-primary mt-5 w-100">Go to sign in</a>
+        <a href="https://riomac.zohodesk.com/portal" class="btn btn-lg btn-primary mt-5 w-100">Go to Log in</a>
     </div>
 
 </body>

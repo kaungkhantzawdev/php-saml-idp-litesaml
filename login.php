@@ -54,7 +54,7 @@ $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
                 </div>
 
                 <div>
-                    <button type="submit" class="btn btn-primary btn-lg px-4 mt-3" style="width: 400px">Sign in</button>
+                    <button type="submit" class="btn btn-primary btn-lg px-4 mt-3" style="width: 400px">Log in</button>
                 </div>
 
                 <input type="hidden" name="SAMLRequest"
