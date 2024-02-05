@@ -11,7 +11,7 @@ class IdpProvider {
    *   The Assertion Consumer Service Url.
    */
   public function getServiceProviderAcs(){
-    return 'http://saml.global-connect.asia/web';
+    return 'https://saml.global-connect.asia/web';
   }
 
   /**
