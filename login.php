@@ -31,7 +31,7 @@ $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
 <body>
 
     <div class="px-4 py-5 my-5 mx-auto" style="width: 500px">
-        <img class="d-block mb-4 rounded" src="https://www.judgify.me/l/wp-content/uploads/2020/09/Judgify-logo.png" alt="" width="100px" height="auto">
+        <img class="d-block mb-4 rounded" src="https://www.judgify.me/l/wp-content/uploads/2020/09/Judgify-logo.png" alt="" width="200px" height="auto">
         <p class="lead mb-5">
             Please log in.
         </p>
