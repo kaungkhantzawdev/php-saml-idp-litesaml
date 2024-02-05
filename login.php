@@ -14,31 +14,48 @@ $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
     <title>IdP Login</title>
     <link href="https://riomac.zohodesk.com/portal/api/publicImages/950038000000255201?portalId=edbsn9ea9485e90573df8c3aa7702a5af8fe9dcf22a7ccd284b1d2c50ffabe2acc9f0" type="IMAGE/X-ICON" rel="SHORTCUT ICON">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .r-t {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .r-b {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="px-4 py-5 my-5 text-center">
-        <img class="d-block mx-auto mb-4 rounded" src="https://info.varonis.com/hubfs/Blog_SAML_BlogHero_202202_V1.png" alt="" width="auto" height="200">
-        <h1 class="display-5 fw-bold text-body-emphasis my-4">IDP Login </h1>
-        <div class="col-lg-6 mx-auto">
+    <div class="px-4 py-5 my-5 mx-auto" style="width: 500px">
+        <img class="d-block mb-4 rounded" src="https://www.judgify.me/l/wp-content/uploads/2020/09/Judgify-logo.png" alt="" width="100px" height="auto">
         <p class="lead mb-5">
-            Please log in with your IDP account to access this service.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit veniam, repellat cumque nulla soluta rerum dolores recusandae, atque adipisci ipsum, ea quas iure dicta molestiae! Ex atque esse explicabo hic.
+            Please log in.
         </p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-
-            <form action="post-saml.php">
-                <div class="d-flex mb-3">
-                    <div class="form-floating me-2" style="width: 300px">
-                        <input name="user_email"  type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <div class="">
+            
+            <form action="dashboard.php">
+                <div class="">
+                    <div class="form-floating" style="width: 400px">
+                        <input name="user_email"  
+                               type="email" 
+                               class="form-control r-t" 
+                               id="floatingInput" 
+                               placeholder="name@example.com">
                         <label for="floatingInput">Email address</label>
                     </div>
-                    <div class="form-floating"  style="width: 300px">
-                        <input name="password"  type="password" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <div class="form-floating"  style="width: 400px">
+                        <input name="password"  type="password" class="form-control r-b" id="floatingInput" placeholder="....">
                         <label for="floatingInput">Password</label>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg px-4 gap-3 w-100">Sign in</button>
+
+                <div>
+                    <button type="submit" class="btn btn-primary btn-lg px-4 mt-3" style="width: 400px">Sign in</button>
+                </div>
 
                 <input type="hidden" name="SAMLRequest"
                     value="<?php print $request->get("SAMLRequest") ?>">
@@ -48,7 +65,7 @@ $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
 
         </div>
 
-            <div class="bg-light rounded p-4 my-5">
+            <div class="bg-light rounded p-4 my-5 d-none">
                 <div>
                     <h5>SAMLRequest </h5>
                     <p style="word-break: break-all;">
