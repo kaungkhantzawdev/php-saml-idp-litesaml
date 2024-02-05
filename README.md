@@ -32,21 +32,6 @@ Install project with composer
 
   composer install or composer update
 ```
-    
-## Deployment
-
-To build this project
-
-```bash
-  pnpm run build
-```
-
-To deploy this project run
-
-```bash
-  pnpm run start
-```
-
 
 ## Authors
 
