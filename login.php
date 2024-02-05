@@ -44,11 +44,11 @@ $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
                                type="email" 
                                class="form-control r-t" 
                                id="floatingInput" 
-                               placeholder="name@example.com">
+                               placeholder="name@example.com" required>
                         <label for="floatingInput">Email address</label>
                     </div>
                     <div class="form-floating"  style="width: 400px">
-                        <input name="password"  type="password" class="form-control r-b" id="floatingInput" placeholder="....">
+                        <input name="password"  type="password" class="form-control r-b" id="floatingInput" placeholder="...." required>
                         <label for="floatingInput">Password</label>
                     </div>
                 </div>
