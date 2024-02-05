@@ -43,7 +43,7 @@ $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
                     <input type="hidden" name="SAMLRequest"
                         value="<?php print $request->get("SAMLRequest") ?>">
                     <input type="hidden" name="RelayState"
-                        value="<?php print $request->get("RelayState") ?>">
+                        value="<?php print base64_decode($request->get("RelayState")) ?>">
                 </form>
             </div>
         </div>
@@ -59,7 +59,7 @@ $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
                 <div>
                     <h5>RelayState </h5>
                     <p style="word-break: break-all;">
-                    <?php print $request->get("RelayState") ?>
+                    <?php print base64_decode($request->get("RelayState"))?>
                     </p>
                 </div>
         </div>
