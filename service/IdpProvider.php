@@ -12,7 +12,8 @@ class IdpProvider {
    */
   public function getServiceProviderAcs(){
     // return 'https://saml.global-connect.asia/auth_saml/signin';
-    return "https://dev-test.awardregister.com/check.php";
+    // return "https://dev-test.awardregister.com/check.php";
+    return 'http://localhost:8069/auth_saml/signin';
   }
 
   /**
