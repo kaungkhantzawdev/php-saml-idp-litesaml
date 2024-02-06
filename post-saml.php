@@ -38,12 +38,15 @@ $message = $messageContext->getMessage();
 $message->setRelayState(base64_decode($request->get('RelayState')));
 $messageContext->setMessage($message);
 
+print_r($messageContext);
+die();
+
 try {
     // Return the Response.
     /** @var \Symfony\Component\HttpFoundation\Response $httpResponse */
     $httpResponse = $postBinding->send($messageContext);
 		$saml_response = $httpResponse->getData();
-		echo base64_decode($saml_response["SAMLResponse"]);
+		print_r($saml_response);
 
 		die();
 		
