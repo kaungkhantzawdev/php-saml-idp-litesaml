@@ -22,8 +22,15 @@ $xpath = new DOMXPath($doc);
 $xpath->registerNamespace('saml', 'urn:oasis:names:tc:SAML:2.0:assertion');
 // $email = $xpath->query("//saml:Attribute[@Name='Email']/saml:AttributeValue")->item(0)->nodeValue;
 
+// Get the associated DOMDocument
+$domDocument = $xpath->document;
 
-var_dump($xpath);
+// Get the XML content of the document
+$xmlString = $domDocument->saveXML();
+
+// Output the XML content
+echo $xmlString;
+// var_dump($xpath);
 die();
     
 
