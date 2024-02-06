@@ -48,7 +48,7 @@ try {
 
 		// die();
 
-    $samlResponse = $saml_response['SAMLResponse'];
+    $samlResponse = base64_decode($saml_response['SAMLResponse']);
     
     // Now $samlResponse contains the raw SAML response XML
     
