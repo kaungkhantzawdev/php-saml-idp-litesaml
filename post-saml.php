@@ -43,26 +43,11 @@ try {
     // Return the Response.
     /** @var \Symfony\Component\HttpFoundation\Response $httpResponse */
     $httpResponse = $postBinding->send($messageContext);
-		$saml_response = $httpResponse->getData();
+		// $saml_response = $httpResponse->getData();
 		// print_r(base64_decode($saml_response['SAMLResponse']));
 
 		// die();
 
-    $samlResponse = base64_decode($saml_response['SAMLResponse']);
-    
-    // Load the response into a DOMDocument
-    $doc = new DOMDocument();
-    $doc->loadXML($samlResponse);
-
-    // Extract relevant information (e.g., user attributes)
-    $xpath = new DOMXPath($doc);
-    $xpath->registerNamespace('saml', 'urn:oasis:names:tc:SAML:2.0:assertion');
-    $email = $xpath->query("//saml:Attribute[@Name='Email']/saml:AttributeValue")->item(0)->nodeValue;
-
-
-    var_dump($email);
-    die();
-		
     print $httpResponse->getContent();
 } catch (\Exception $e) {
     echo 'Caught exception: ', $e->getMessage(), "\n";
