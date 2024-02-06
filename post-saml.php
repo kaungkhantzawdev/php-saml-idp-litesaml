@@ -35,13 +35,18 @@ $messageContext->setMessage($response);
 
 // Ensure we include the RelayState.
 $message = $messageContext->getMessage();
-$message->setRelayState($request->get('RelayState'));
+$message->setRelayState(base64_decode($request->get('RelayState')));
 $messageContext->setMessage($message);
 
 try {
     // Return the Response.
     /** @var \Symfony\Component\HttpFoundation\Response $httpResponse */
     $httpResponse = $postBinding->send($messageContext);
+		//$saml_response = $httpResponse->getData();
+		//echo $saml_response["SAMLResponse"];
+
+		//die();
+		
     print $httpResponse->getContent();
 } catch (\Exception $e) {
     echo 'Caught exception: ', $e->getMessage(), "\n";
