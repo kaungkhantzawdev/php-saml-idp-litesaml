@@ -16,7 +16,7 @@
             You're successfully Log out. 
             </div>
         </p>
-        <a href="https://riomac.zohodesk.com/portal" class="btn btn-lg btn-primary mt-5 w-100">Go to Log in</a>
+        <a href="https://samltest.zohodesk.com/portal" class="btn btn-lg btn-primary mt-5 w-100">Go to Log in</a>
     </div>
 
 </body>

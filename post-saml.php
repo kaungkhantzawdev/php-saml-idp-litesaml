@@ -42,6 +42,9 @@ try {
     // Return the Response.
     /** @var \Symfony\Component\HttpFoundation\Response $httpResponse */
     $httpResponse = $postBinding->send($messageContext);
+    $samlRe = $httpResponse->getData();
+    var_dump($samlRe);
+    die();
     print $httpResponse->getContent();
 } catch (\Exception $e) {
     echo 'Caught exception: ', $e->getMessage(), "\n";
