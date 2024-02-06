@@ -3,6 +3,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 include "inc.php";
+include "service/IdpTools.php";
 
 $idpTools = new IdpTools();
 
