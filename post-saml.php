@@ -52,7 +52,7 @@ try {
     
     // Load the response into a DOMDocument
     $doc = new DOMDocument();
-    $doc->loadXML($samlResponseDecoded);
+    $doc->loadXML($samlResponse);
 
     // Extract relevant information (e.g., user attributes)
     $xpath = new DOMXPath($doc);
