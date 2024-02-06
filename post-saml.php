@@ -55,7 +55,7 @@ try {
     // You can parse and process the SAML response using a library like LightSAML
     // For example, using LightSAML:
     $response = new \LightSaml\Model\Protocol\Response();
-    $response->loadXml($samlResponse);
+    $response->fromXml($samlResponse);
 
     // Now you can access various attributes of the SAML response
     $status = $response->getStatus();
