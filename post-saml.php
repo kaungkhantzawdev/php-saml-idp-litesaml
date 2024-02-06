@@ -43,11 +43,11 @@ try {
     /** @var \Symfony\Component\HttpFoundation\Response $httpResponse */
     $httpResponse = $postBinding->send($messageContext);
 		$saml_response = $httpResponse->getData();
-		print_r($saml_response);
+		echo base64_decode($saml_response["SAMLResponse"]);
 
 		die();
 		
-    // print $httpResponse->getContent();
+    print $httpResponse->getContent();
 } catch (\Exception $e) {
     echo 'Caught exception: ', $e->getMessage(), "\n";
 }
