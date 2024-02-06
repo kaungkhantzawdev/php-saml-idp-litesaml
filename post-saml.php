@@ -17,7 +17,7 @@ $idpTools = new IdpTools();
 $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
 $saml_request = $idpTools->readSAMLRequest($request);
 
-var_dump($request->post('RelayState'));
+var_dump($request->get('RelayState'));
 die();
 
 // Getting a few details from the message like ID and Issuer.
