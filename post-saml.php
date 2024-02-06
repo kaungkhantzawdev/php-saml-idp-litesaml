@@ -43,7 +43,7 @@ try {
     /** @var \Symfony\Component\HttpFoundation\Response $httpResponse */
     $httpResponse = $postBinding->send($messageContext);
 		$saml_response = $httpResponse->getData();
-		print_r(base64_decode($saml_response));
+		print_r(base64_decode($saml_response['SAMLResponse']));
 
 		die();
 		
