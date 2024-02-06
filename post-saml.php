@@ -25,7 +25,7 @@ $user_id = "spec-id-1001";
 $user_email = $request->get("user_email");
 
 // Construct a SAML Response.
-$response = $idpTools->createSAMLResponse($idpProvider, $user_id, $user_email, $issuer, $id);
+$response = $idpTools->createSAMLResponse($idpProvider, $user_id, $user_email, $issuer, $id, base64_decode($request->get('RelayState')));
 
 // Prepare the POST binding (form).
 $bindingFactory = new \LightSaml\Binding\BindingFactory();
@@ -35,7 +35,7 @@ $messageContext->setMessage($response);
 
 // Ensure we include the RelayState.
 $message = $messageContext->getMessage();
-$message->setRelayState(base64_decode($request->get('RelayState')));
+// $message->setRelayState(base64_decode($request->get('RelayState')));
 $messageContext->setMessage($message);
 
 try {
