@@ -29,8 +29,8 @@ $domDocument = $xpath->document;
 $xmlString = $domDocument->saveXML();
 
 // Output the XML content
-echo $xmlString;
-// var_dump($xpath);
+// echo $xmlString;
+var_dump($request);
 die();
     
 
