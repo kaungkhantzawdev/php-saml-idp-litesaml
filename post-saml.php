@@ -57,7 +57,7 @@ try {
     // Extract relevant information (e.g., user attributes)
     $xpath = new DOMXPath($doc);
     $xpath->registerNamespace('saml', 'urn:oasis:names:tc:SAML:2.0:assertion');
-
+    echo $_POST('RelayState');
 
     var_dump($xpath);
     die();
