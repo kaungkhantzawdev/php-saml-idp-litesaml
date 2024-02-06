@@ -37,7 +37,7 @@ class IdpTools{
    * @param $issuer
    * @param $id
    */
-  public function createSAMLResponse($idpProvider, $user_id, $user_email, $issuer, $id, $relay_state){
+  public function createSAMLResponse($idpProvider, $user_id, $user_email, $issuer, $id){
 
 
     $acsUrl = $idpProvider->getServiceProviderAcs();
@@ -47,7 +47,6 @@ class IdpTools{
 
     // We now start constructing the SAML Response using LightSAML.
     $response = new \LightSaml\Model\Protocol\Response();
-    $response->setRelayState($relay_state);
     $response
         ->addAssertion($assertion = new \LightSaml\Model\Assertion\Assertion())
         ->setStatus(new \LightSaml\Model\Protocol\Status(
