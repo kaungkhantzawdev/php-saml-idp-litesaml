@@ -6,6 +6,8 @@ include "inc.php";
 include "service/IdpProvider.php";
 include "service/IdpTools.php";
 
+use LightSaml\Model\Protocol\Response;
+
 // Initiating our IdP Provider dummy connection.
 $idpProvider = new IdpProvider();
 
@@ -46,6 +48,25 @@ try {
 		// print_r(base64_decode($saml_response['SAMLResponse']));
 
 		// die();
+
+    $samlResponse = $saml_response['SAMLResponse'];
+    
+    // Now $samlResponse contains the raw SAML response XML
+    
+    // You can parse and process the SAML response using a library like LightSAML
+    // For example, using LightSAML:
+    
+
+    // Load the SAML response XML
+    $response = new Response();
+    $response->loadXml($samlResponse);
+
+    // Now you can access various attributes of the SAML response
+    $status = $response->getStatus();
+    $assertions = $response->getAllAssertions();
+
+    print_r($assertions);
+    die();
 		
     print $httpResponse->getContent();
 } catch (\Exception $e) {
