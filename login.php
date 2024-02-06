@@ -37,7 +37,7 @@ $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
         </p>
         <div class="d-flex justify-content-center">
             
-            <form action="dashboard.php" method="POST">
+            <form action="dashboard.php">
                 <div class="">
                     <div class="form-floating" style="width: 400px">
                         <input name="user_email"  

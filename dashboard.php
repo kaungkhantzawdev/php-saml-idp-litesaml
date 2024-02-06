@@ -43,7 +43,7 @@ $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
                     <input type="hidden" name="SAMLRequest"
                         value="<?php print $request->get("SAMLRequest") ?>">
                     <input type="hidden" name="RelayState"
-                        value="<?php print base64_decode($request->get("RelayState")) ?>">
+                        value="<?php print $request->get("RelayState") ?>">
                 </form>
             </div>
         </div>
