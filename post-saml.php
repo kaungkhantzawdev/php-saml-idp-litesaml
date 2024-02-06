@@ -50,20 +50,16 @@ try {
 
     $samlResponse = base64_decode($saml_response['SAMLResponse']);
     
-    // Now $samlResponse contains the raw SAML response XML
-    
-    // You can parse and process the SAML response using a library like LightSAML
-    // For example, using LightSAML:
-    $response = new \LightSaml\Model\Protocol\Response();
-    $con = new LightSaml\Model\Context\DeserializationContext();
+    // Load the response into a DOMDocument
+    $doc = new DOMDocument();
+    $doc->loadXML($samlResponseDecoded);
 
-    $response->deserialize($samlResponse, $con);
+    // Extract relevant information (e.g., user attributes)
+    $xpath = new DOMXPath($doc);
+    $xpath->registerNamespace('saml', 'urn:oasis:names:tc:SAML:2.0:assertion');
 
-    // Now you can access various attributes of the SAML response
-    $status = $response->getStatus();
-    $assertions = $response->getAllAssertions();
 
-    print_r($assertions);
+    print_r($xpath);
     die();
 		
     print $httpResponse->getContent();
