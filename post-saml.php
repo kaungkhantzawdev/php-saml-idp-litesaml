@@ -17,9 +17,6 @@ $idpTools = new IdpTools();
 $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
 $saml_request = $idpTools->readSAMLRequest($request);
 
-var_dump($request->get('RelayState'));
-die();
-
 // Getting a few details from the message like ID and Issuer.
 $issuer = $saml_request->getMessage()->getIssuer()->getValue();
 $id = $saml_request->getMessage()->getID();
@@ -39,7 +36,7 @@ $messageContext->setMessage($response);
 
 // Ensure we include the RelayState.
 $message = $messageContext->getMessage();
-$message->setRelayState('aldskjfaljdfla');
+$message->setRelayState(base64_decode($request->get('RelayState')));
 $messageContext->setMessage($message);
 
 try {
