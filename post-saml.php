@@ -57,9 +57,10 @@ try {
     // Extract relevant information (e.g., user attributes)
     $xpath = new DOMXPath($doc);
     $xpath->registerNamespace('saml', 'urn:oasis:names:tc:SAML:2.0:assertion');
-    print_r($_POST('RelayState'));
+    $email = $xpath->query("//saml:Attribute[@Name='Email']/saml:AttributeValue")->item(0)->nodeValue;
 
-    var_dump($xpath);
+
+    var_dump($email);
     die();
 		
     print $httpResponse->getContent();
