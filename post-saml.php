@@ -59,7 +59,7 @@ try {
     $xpath->registerNamespace('saml', 'urn:oasis:names:tc:SAML:2.0:assertion');
 
 
-    print_r($xpath);
+    var_dump($xpath);
     die();
 		
     print $httpResponse->getContent();
