@@ -22,7 +22,7 @@ class IdpProvider {
    * @return string
    */
   public function getIdPId(){
-    return "https://dev-test.awardregister.com/";
+    return "https://dev-test.awardregister.com/metadata.php";
   }
 
   /**
