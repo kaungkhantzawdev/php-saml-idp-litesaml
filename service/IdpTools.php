@@ -104,6 +104,60 @@ class IdpTools{
                 \LightSaml\ClaimTypes::COMMON_NAME,
                 'x123'
             ))
+            ->addAttribute(new \LightSaml\Model\Assertion\Attribute(
+                \LightSaml\ClaimTypes::GIVEN_NAME,
+                'given-name'
+            ))
+            ->addAttribute(new \LightSaml\Model\Assertion\Attribute(
+                \LightSaml\ClaimTypes::NAME,
+                'name'
+            ))
+            ->addAttribute(new \LightSaml\Model\Assertion\Attribute(
+                \LightSaml\ClaimTypes::UPN,
+                'upn'
+            ))
+            ->addAttribute(new \LightSaml\Model\Assertion\Attribute(
+                \LightSaml\ClaimTypes::ADFS_1_EMAIL,
+                'adfs_1_email'
+            ))
+            ->addAttribute(new \LightSaml\Model\Assertion\Attribute(
+                \LightSaml\ClaimTypes::GROUP,
+                'group'
+            ))
+            ->addAttribute(new \LightSaml\Model\Assertion\Attribute(
+                \LightSaml\ClaimTypes::ADFS_1_UPN,
+                'adfs_1_upn'
+            ))
+            ->addAttribute(new \LightSaml\Model\Assertion\Attribute(
+                \LightSaml\ClaimTypes::ROLE,
+                'role'
+            ))
+            ->addAttribute(new \LightSaml\Model\Assertion\Attribute(
+                \LightSaml\ClaimTypes::SURNAME,
+                'surname'
+            ))
+            ->addAttribute(new \LightSaml\Model\Assertion\Attribute(
+                \LightSaml\ClaimTypes::PPID,
+                'ppid'
+            ))
+            ->addAttribute(new \LightSaml\Model\Assertion\Attribute(
+                \LightSaml\ClaimTypes::NAME_ID,
+                'name_id'
+            ))
+            ->addAttribute(new \LightSaml\Model\Assertion\Attribute(
+                \LightSaml\ClaimTypes::AUTHENTICATION_TIMESTAMP,
+                'authentication'
+            ))
+            ->addAttribute(new \LightSaml\Model\Assertion\Attribute(
+                \LightSaml\ClaimTypes::AUTHENTICATION_METHOD,
+                'authentication_method'
+            ))
+            ->addAttribute(new \LightSaml\Model\Assertion\Attribute(
+                \LightSaml\ClaimTypes::WINDOWS_ACCOUNT_NAME,
+                'windows_account_name'
+            ))
+
+
         )
         ->addItem(
             (new \LightSaml\Model\Assertion\AuthnStatement())
